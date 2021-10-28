@@ -5,12 +5,12 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class App extends Application {
-    
+
     private Controller controller;
-    
+
     @Override
     public void start(Stage primaryStage) throws Exception {
-        
+
         controller = new Controller();
 
         Scene scene = new Scene(controller.getview());
@@ -21,7 +21,7 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
-        
+
         launch(args);
     }
 }
