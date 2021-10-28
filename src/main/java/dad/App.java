@@ -1,13 +1,23 @@
 package dad;
 
 import javafx.application.Application;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class App extends Application {
     
+    private Controller controller;
+    
     @Override
-    public void start(Stage arg0) throws Exception {
+    public void start(Stage primaryStage) throws Exception {
         
+        controller = new Controller();
+
+        Scene scene = new Scene(controller.getview());
+
+        primaryStage.setTitle("Calculadora FXML");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     public static void main(String[] args) {
