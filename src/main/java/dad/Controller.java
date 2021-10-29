@@ -46,6 +46,12 @@ public class Controller implements Initializable {
     @FXML
     private void onClick(ActionEvent e) {
 
+        // Este Switch case está hecho un poco con "trampas" ya que estoy escogiendo el
+        // valor de E.getSouerces y lo paso a String, despues
+        // Cojo el valor que tiene usando charAt y la posición final - 2 para poder
+        // coger el el ultimo valor que es el numero o caracter del
+        // Botton.
+
         char letra = e.getSource().toString().charAt(e.getSource().toString().length() - 2);
 
         switch (letra) {
@@ -87,7 +93,7 @@ public class Controller implements Initializable {
             break;
         }
 
-        //Este codigo de If-else fue lo primero que se me ocurrio
+        // Este codigo de If-else fue lo primero que se me ocurrio
 
         // if (e.getSource().equals(button0)) {
         // calculadora.insertar(button0.getText().charAt(0));
