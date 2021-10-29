@@ -46,79 +46,80 @@ public class Controller implements Initializable {
     @FXML
     private void onClick(ActionEvent e) {
 
-        // char letra = e.getSource().toString().charAt(38);
+        char letra = e.getSource().toString().charAt(e.getSource().toString().length() - 2);
+        System.out.println(letra);
 
-        // switch (letra) {
-        // case '0':
-        // case '1':
-        // case '2':
-        // case '3':
-        // case '4':
-        // case '5':
-        // case '6':
-        // case '7':
-        // case '8':
-        // case '9':
-        //     calculadora.insertar(letra);
-        //     break;
-        // case '+':
-        //     calculadora.operar(Calculadora.SUMAR);
-        //     break;
-        // case '-':
-        //     calculadora.operar(Calculadora.RESTAR);
-        //     break;
-        // case '*':
-        //     calculadora.operar(Calculadora.MULTIPLICAR);
-        //     break;
-        // case '/':
-        //     calculadora.operar(Calculadora.DIVIDIR);
-        //     break;
-        // case '.':
-        //     calculadora.insertarComa();
-        //     break;
-        // case '=':
-        //     calculadora.operar(Calculadora.IGUAL);
-        // default:
-        //     break;
-        // }
-
-        if (e.getSource().equals(button0)) {
-        calculadora.insertar(button0.getText().charAt(0));
-        } else if (e.getSource().equals(button1)) {
-        calculadora.insertar(button1.getText().charAt(0));
-        } else if (e.getSource().equals(button2)) {
-        calculadora.insertar(button2.getText().charAt(0));
-        } else if (e.getSource().equals(button3)) {
-        calculadora.insertar(button3.getText().charAt(0));
-        } else if (e.getSource().equals(button4)) {
-        calculadora.insertar(button4.getText().charAt(0));
-        } else if (e.getSource().equals(button5)) {
-        calculadora.insertar(button5.getText().charAt(0));
-        } else if (e.getSource().equals(button6)) {
-        calculadora.insertar(button6.getText().charAt(0));
-        } else if (e.getSource().equals(button7)) {
-        calculadora.insertar(button7.getText().charAt(0));
-        } else if (e.getSource().equals(button8)) {
-        calculadora.insertar(button8.getText().charAt(0));
-        } else if (e.getSource().equals(button9)) {
-        calculadora.insertar(button9.getText().charAt(0));
-        } else if (e.getSource().equals(buttonC)) {
-        calculadora.borrar();
-        } else if (e.getSource().equals(buttonE)) {
-        calculadora.borrarTodo();
-        } else if (e.getSource().equals(buttonS)) {
-        calculadora.operar(Calculadora.SUMAR);
-        }else if (e.getSource().equals(buttonR)) {
-        calculadora.operar(Calculadora.RESTAR);
-        } else if (e.getSource().equals(buttonD)) {
-        calculadora.operar(Calculadora.DIVIDIR);
-        } else if (e.getSource().equals(buttonM)) {
-        calculadora.operar(Calculadora.MULTIPLICAR);
-        } else if (e.getSource().equals(buttonI)) {
-        calculadora.operar(Calculadora.IGUAL);
-        } else {
-        calculadora.insertarComa();
+        switch (letra) {
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+            calculadora.insertar(letra);
+            break;
+        case '+':
+            calculadora.operar(Calculadora.SUMAR);
+            break;
+        case '-':
+            calculadora.operar(Calculadora.RESTAR);
+            break;
+        case '*':
+            calculadora.operar(Calculadora.MULTIPLICAR);
+            break;
+        case '/':
+            calculadora.operar(Calculadora.DIVIDIR);
+            break;
+        case '.':
+            calculadora.insertarComa();
+            break;
+        case '=':
+            calculadora.operar(Calculadora.IGUAL);
+        default:
+            break;
         }
+
+        // if (e.getSource().equals(button0)) {
+        // calculadora.insertar(button0.getText().charAt(0));
+        // } else if (e.getSource().equals(button1)) {
+        // calculadora.insertar(button1.getText().charAt(0));
+        // } else if (e.getSource().equals(button2)) {
+        // calculadora.insertar(button2.getText().charAt(0));
+        // } else if (e.getSource().equals(button3)) {
+        // calculadora.insertar(button3.getText().charAt(0));
+        // } else if (e.getSource().equals(button4)) {
+        // calculadora.insertar(button4.getText().charAt(0));
+        // } else if (e.getSource().equals(button5)) {
+        // calculadora.insertar(button5.getText().charAt(0));
+        // } else if (e.getSource().equals(button6)) {
+        // calculadora.insertar(button6.getText().charAt(0));
+        // } else if (e.getSource().equals(button7)) {
+        // calculadora.insertar(button7.getText().charAt(0));
+        // } else if (e.getSource().equals(button8)) {
+        // calculadora.insertar(button8.getText().charAt(0));
+        // } else if (e.getSource().equals(button9)) {
+        // calculadora.insertar(button9.getText().charAt(0));
+        // } else if (e.getSource().equals(buttonC)) {
+        // calculadora.borrar();
+        // } else if (e.getSource().equals(buttonE)) {
+        // calculadora.borrarTodo();
+        // } else if (e.getSource().equals(buttonS)) {
+        // calculadora.operar(Calculadora.SUMAR);
+        // }else if (e.getSource().equals(buttonR)) {
+        // calculadora.operar(Calculadora.RESTAR);
+        // } else if (e.getSource().equals(buttonD)) {
+        // calculadora.operar(Calculadora.DIVIDIR);
+        // } else if (e.getSource().equals(buttonM)) {
+        // calculadora.operar(Calculadora.MULTIPLICAR);
+        // } else if (e.getSource().equals(buttonI)) {
+        // calculadora.operar(Calculadora.IGUAL);
+        // } else {
+        // calculadora.insertarComa();
+        // }
 
         textProperty.set(calculadora.getPantalla());
 
