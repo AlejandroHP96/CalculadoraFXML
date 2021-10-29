@@ -48,7 +48,6 @@ public class Controller implements Initializable {
 
         char letra = e.getSource().toString().charAt(e.getSource().toString().length() - 2);
 
-
         switch (letra) {
         case '0':
         case '1':
@@ -87,6 +86,8 @@ public class Controller implements Initializable {
             calculadora.borrarTodo();
             break;
         }
+
+        //Este codigo de If-else fue lo primero que se me ocurrio
 
         // if (e.getSource().equals(button0)) {
         // calculadora.insertar(button0.getText().charAt(0));
