@@ -47,7 +47,7 @@ public class Controller implements Initializable {
     private void onClick(ActionEvent e) {
 
         char letra = e.getSource().toString().charAt(e.getSource().toString().length() - 2);
-        System.out.println(letra);
+
 
         switch (letra) {
         case '0':
@@ -79,7 +79,12 @@ public class Controller implements Initializable {
             break;
         case '=':
             calculadora.operar(Calculadora.IGUAL);
-        default:
+            break;
+        case 'C':
+            calculadora.borrar();
+            break;
+        case 'E':
+            calculadora.borrarTodo();
             break;
         }
 
